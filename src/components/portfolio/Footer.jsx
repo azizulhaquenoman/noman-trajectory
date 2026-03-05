@@ -30,7 +30,7 @@ const Footer = ({ data }) => {
           </div>
 
           <p className="text-slate-500 text-sm flex items-center gap-1">
-            Built with <FiHeart className="text-red-500" /> using React
+            Built with <FiHeart className="text-red-500" /> by {personalInfo?.name?.split(' ').at(-1) || 'Noman'}
           </p>
         </div>
       </div>
