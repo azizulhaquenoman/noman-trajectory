@@ -4,8 +4,7 @@
     "title": "Full Stack Developer",
     "subtitle": "Building digital experiences that matter",
     "bio": "I'm a passionate full stack developer with expertise in building modern web applications. I love turning complex problems into simple, beautiful and intuitive solutions. When I'm not coding, you'll find me exploring new technologies and contributing to open source.",
-    "avatar": "",
-    "resumeUrl": ""
+    "avatar": ""
   },
   "skills": [
     {
@@ -82,13 +81,20 @@
     }
   ],
   "contact": {
-    "email": "hello@example.com",
-    "phone": "",
+    "emails": ["hello@example.com"],
+    "phones": [""],
     "location": "San Francisco, CA",
+    "resumeUrl": "",
+    "cvUrl": "",
     "social": {
       "github": "https://github.com",
       "linkedin": "https://linkedin.com",
       "twitter": "https://twitter.com",
+      "instagram": "",
+      "facebook": "",
+      "youtube": "",
+      "dribbble": "",
+      "behance": "",
       "website": ""
     }
   }
