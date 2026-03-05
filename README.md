@@ -236,6 +236,41 @@ Then open these two links in your browser:
 
 ---
 
+## Updating Your Portfolio & Publishing to GitHub Pages
+
+Every time you want to update your live portfolio, run all these steps **on your local PC**:
+
+```bash
+# Step 1 — start local servers
+npm run dev:all
+
+# Step 2 — open admin panel, make your changes, click "Save All"
+# (this updates public/data/portfolioData.json on your PC)
+
+# Step 3 — stop the dev server (Ctrl + C), then build the new version
+npm run build
+
+# Step 4 — push the build to GitHub Pages
+npm run deploy
+```
+
+After `npm run deploy` finishes, your live site at  
+`https://azizulhaquenoman.github.io/noman-trajectory/`  
+will be updated within a minute or two.
+
+> **Yes** — steps 3 and 4 (`build` + `deploy`) must always be run from your local PC.  
+> GitHub Pages only hosts the built files; it cannot build or save data on its own.
+
+**Shortcut** — if you only changed text/data (no code), you can skip step 1 and just edit  
+`public/data/portfolioData.json` directly in VS Code, then run:
+
+```bash
+npm run build
+npm run deploy
+```
+
+---
+
 ## License
 
 MIT
