@@ -1,36 +1,66 @@
 {
   "personalInfo": {
-    "name": "John Doe",
-    "title": "Full Stack Developer",
-    "subtitle": "Building digital experiences that matter",
-    "bio": "I'm a passionate full stack developer with expertise in building modern web applications. I love turning complex problems into simple, beautiful and intuitive solutions. When I'm not coding, you'll find me exploring new technologies and contributing to open source.",
-    "avatar": ""
+    "name": "Azizul Haque Noman",
+    "title": "Aspiring AI/ML Engineer",
+    "subtitle": "Building intelligent systems through AI/ML and scalable backend development.",
+    "bio": "I am a Computer Science student passionate about Artificial Intelligence and Machine Learning. I focus on building intelligent systems and scalable backend applications. My interests include image processing, NLP, and large language models. I continuously improve my skills through hands-on projects, research, and practical implementation.",
+    "avatar": "assets\\noman.jpg"
   },
   "skills": [
     {
       "category": "Frontend",
-      "items": ["React", "JavaScript", "TypeScript", "HTML5", "CSS3", "Tailwind CSS"]
+      "items": [
+        "React",
+        "JavaScript",
+        "TypeScript",
+        "HTML5",
+        "CSS3",
+        "Tailwind CSS"
+      ]
     },
     {
       "category": "Backend",
-      "items": ["Node.js", "Express", "Python", "Django", "REST APIs"]
+      "items": [
+        "Node.js",
+        "Express",
+        "Python",
+        "Django",
+        "REST APIs"
+      ]
     },
     {
       "category": "Database",
-      "items": ["MongoDB", "PostgreSQL", "MySQL", "Redis"]
+      "items": [
+        "MongoDB",
+        "PostgreSQL",
+        "MySQL",
+        "Redis"
+      ]
     },
     {
       "category": "Tools & Others",
-      "items": ["Git", "Docker", "AWS", "Linux", "CI/CD", "Figma"]
+      "items": [
+        "Git",
+        "Docker",
+        "AWS",
+        "Linux",
+        "CI/CD",
+        "Figma"
+      ]
     }
   ],
   "projects": [
     {
       "id": 1,
-      "title": "E-Commerce Platform",
+      "title": "Direct-Edge",
       "description": "A full-featured e-commerce platform with cart, checkout, payment integration, and admin dashboard.",
       "image": "",
-      "technologies": ["React", "Node.js", "MongoDB", "Stripe"],
+      "technologies": [
+        "React",
+        "Node.js",
+        "MongoDB",
+        "Stripe"
+      ],
       "liveUrl": "",
       "githubUrl": ""
     },
@@ -39,7 +69,11 @@
       "title": "Task Management App",
       "description": "A collaborative task management application with real-time updates, drag & drop, and team features.",
       "image": "",
-      "technologies": ["React", "Firebase", "Tailwind CSS"],
+      "technologies": [
+        "React",
+        "Firebase",
+        "Tailwind CSS"
+      ],
       "liveUrl": "",
       "githubUrl": ""
     },
@@ -48,7 +82,11 @@
       "title": "Weather Dashboard",
       "description": "A beautiful weather dashboard showing current conditions, forecasts, and historical data with interactive charts.",
       "image": "",
-      "technologies": ["React", "Chart.js", "OpenWeather API"],
+      "technologies": [
+        "React",
+        "Chart.js",
+        "OpenWeather API"
+      ],
       "liveUrl": "",
       "githubUrl": ""
     }
@@ -60,7 +98,11 @@
       "role": "Senior Developer",
       "duration": "2022 - Present",
       "description": "Leading the frontend team in building scalable web applications. Implemented CI/CD pipelines and improved performance by 40%.",
-      "technologies": ["React", "TypeScript", "AWS"]
+      "technologies": [
+        "React",
+        "TypeScript",
+        "AWS"
+      ]
     },
     {
       "id": 2,
@@ -68,30 +110,39 @@
       "role": "Full Stack Developer",
       "duration": "2020 - 2022",
       "description": "Built and maintained multiple client-facing applications. Collaborated with design team to deliver pixel-perfect UIs.",
-      "technologies": ["Vue.js", "Node.js", "PostgreSQL"]
+      "technologies": [
+        "Vue.js",
+        "Node.js",
+        "PostgreSQL"
+      ]
     }
   ],
   "education": [
     {
       "id": 1,
-      "institution": "University of Technology",
-      "degree": "Bachelor of Science in Computer Science",
-      "year": "2016 - 2020",
-      "description": "Graduated with honors. Specialized in software engineering and web technologies."
+      "institution": "United International University",
+      "degree": "Bachelor of Science in Computer Science and Engineering",
+      "year": "2022 - 2026",
+      "description": "Currently pursuing a Bachelor of Science in Computer Science and Engineering, building strong foundations in software development, algorithms, and system design with a focus on AI/ML and backend technologies."
     }
   ],
   "contact": {
-    "emails": ["hello@example.com"],
-    "phones": [""],
-    "location": "San Francisco, CA",
-    "resumeUrl": "",
+    "emails": [
+      "azizulhaquenoman@gmail.com",
+      "mnoman221338@bscse.uiu.ac.bd"
+    ],
+    "phones": [
+      "01851604135"
+    ],
+    "location": "QCXP+68X Dhaka, Bangladesh",
+    "resumeUrl": "assets\\Resume of Azizul Haque Noman.pdf",
     "cvUrl": "",
     "social": {
-      "github": "https://github.com",
-      "linkedin": "https://linkedin.com",
-      "twitter": "https://twitter.com",
-      "instagram": "",
-      "facebook": "",
+      "github": "https://github.com/azizulhaquenoman",
+      "linkedin": "www.linkedin.com/in/azizulhaquenoman",
+      "twitter": "https://x.com/azizul_noman",
+      "instagram": "https://www.instagram.com/azizulhaquenoman/",
+      "facebook": "https://www.facebook.com/share/1CEjdPk8dg/",
       "youtube": "",
       "dribbble": "",
       "behance": "",
