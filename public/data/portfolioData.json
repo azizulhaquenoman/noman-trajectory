@@ -1,0 +1,101 @@
+{
+  "personalInfo": {
+    "name": "John Doe",
+    "title": "Full Stack Developer",
+    "subtitle": "Building digital experiences that matter",
+    "bio": "I'm a passionate full stack developer with expertise in building modern web applications. I love turning complex problems into simple, beautiful and intuitive solutions. When I'm not coding, you'll find me exploring new technologies and contributing to open source.",
+    "avatar": ""
+  },
+  "skills": [
+    {
+      "category": "Frontend",
+      "items": ["React", "JavaScript", "TypeScript", "HTML5", "CSS3", "Tailwind CSS"]
+    },
+    {
+      "category": "Backend",
+      "items": ["Node.js", "Express", "Python", "Django", "REST APIs"]
+    },
+    {
+      "category": "Database",
+      "items": ["MongoDB", "PostgreSQL", "MySQL", "Redis"]
+    },
+    {
+      "category": "Tools & Others",
+      "items": ["Git", "Docker", "AWS", "Linux", "CI/CD", "Figma"]
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "E-Commerce Platform",
+      "description": "A full-featured e-commerce platform with cart, checkout, payment integration, and admin dashboard.",
+      "image": "",
+      "technologies": ["React", "Node.js", "MongoDB", "Stripe"],
+      "liveUrl": "",
+      "githubUrl": ""
+    },
+    {
+      "id": 2,
+      "title": "Task Management App",
+      "description": "A collaborative task management application with real-time updates, drag & drop, and team features.",
+      "image": "",
+      "technologies": ["React", "Firebase", "Tailwind CSS"],
+      "liveUrl": "",
+      "githubUrl": ""
+    },
+    {
+      "id": 3,
+      "title": "Weather Dashboard",
+      "description": "A beautiful weather dashboard showing current conditions, forecasts, and historical data with interactive charts.",
+      "image": "",
+      "technologies": ["React", "Chart.js", "OpenWeather API"],
+      "liveUrl": "",
+      "githubUrl": ""
+    }
+  ],
+  "experience": [
+    {
+      "id": 1,
+      "company": "Tech Company",
+      "role": "Senior Developer",
+      "duration": "2022 - Present",
+      "description": "Leading the frontend team in building scalable web applications. Implemented CI/CD pipelines and improved performance by 40%.",
+      "technologies": ["React", "TypeScript", "AWS"]
+    },
+    {
+      "id": 2,
+      "company": "Startup Inc",
+      "role": "Full Stack Developer",
+      "duration": "2020 - 2022",
+      "description": "Built and maintained multiple client-facing applications. Collaborated with design team to deliver pixel-perfect UIs.",
+      "technologies": ["Vue.js", "Node.js", "PostgreSQL"]
+    }
+  ],
+  "education": [
+    {
+      "id": 1,
+      "institution": "University of Technology",
+      "degree": "Bachelor of Science in Computer Science",
+      "year": "2016 - 2020",
+      "description": "Graduated with honors. Specialized in software engineering and web technologies."
+    }
+  ],
+  "contact": {
+    "emails": ["hello@example.com"],
+    "phones": [""],
+    "location": "San Francisco, CA",
+    "resumeUrl": "",
+    "cvUrl": "",
+    "social": {
+      "github": "https://github.com",
+      "linkedin": "https://linkedin.com",
+      "twitter": "https://twitter.com",
+      "instagram": "",
+      "facebook": "",
+      "youtube": "",
+      "dribbble": "",
+      "behance": "",
+      "website": ""
+    }
+  }
+}
