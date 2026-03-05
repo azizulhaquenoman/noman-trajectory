@@ -7,6 +7,7 @@ const navLinks = [
   { name: 'Skills', href: '#skills' },
   { name: 'Projects', href: '#projects' },
   { name: 'Experience', href: '#experience' },
+  { name: 'Education', href: '#education' },
   { name: 'Contact', href: '#contact' },
 ]
 
@@ -53,7 +54,7 @@ const Navbar = ({ name }) => {
           onClick={(e) => handleClick(e, '#home')}
           className="text-xl font-bold text-gradient"
         >
-          {name ? `<${name.split(' ')[0]} />` : '<Portfolio />'}
+          {name ? `<${name.split(' ').at(-1)} />` : '<Portfolio />'}
         </a>
 
         <div className="hidden md:flex items-center gap-8">

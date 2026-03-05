@@ -51,20 +51,34 @@ const About = ({ data }) => {
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="relative"
+            className="relative flex justify-center"
           >
             {personalInfo.avatar ? (
-              <img
-                src={personalInfo.avatar}
-                alt={personalInfo.name}
-                className="rounded-2xl w-full max-w-md mx-auto border-2 border-slate-700"
-              />
-            ) : (
-              <div className="glass-card p-12 text-center max-w-md mx-auto">
-                <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center text-5xl font-bold text-white mb-4">
-                  {personalInfo.name?.split(' ').map(n => n[0]).join('') || '?'}
+              <div className="relative">
+                {/* Glowing gradient ring */}
+                <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-full p-[3px] bg-gradient-to-br from-cyan-500 to-blue-500 shadow-xl shadow-cyan-500/20">
+                  <div className="w-full h-full rounded-full overflow-hidden border-4 border-slate-900">
+                    <img
+                      src={personalInfo.avatar}
+                      alt={personalInfo.name}
+                      className="w-full h-full object-cover object-top"
+                    />
+                  </div>
                 </div>
-                <p className="text-slate-400 text-sm">Add your photo via the admin panel</p>
+                {/* Subtle outer glow */}
+                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-cyan-500/20 to-blue-500/20 blur-2xl -z-10 scale-110" />
+              </div>
+            ) : (
+              <div className="relative">
+                <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-full p-[3px] bg-gradient-to-br from-cyan-500 to-blue-500 shadow-xl shadow-cyan-500/20">
+                  <div className="w-full h-full rounded-full overflow-hidden border-4 border-slate-900 bg-slate-800 flex flex-col items-center justify-center gap-2">
+                    <div className="text-6xl font-bold text-gradient">
+                      {personalInfo.name?.split(' ').map(n => n[0]).join('') || '?'}
+                    </div>
+                    <p className="text-slate-500 text-xs px-4 text-center">Add your photo via the admin panel</p>
+                  </div>
+                </div>
+                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-cyan-500/20 to-blue-500/20 blur-2xl -z-10 scale-110" />
               </div>
             )}
           </motion.div>
