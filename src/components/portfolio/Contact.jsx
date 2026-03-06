@@ -86,17 +86,30 @@ const Contact = ({ contact }) => {
                   <span>{contact.location}</span>
                 </div>
               )}
+            </div>
+          </motion.div>
 
-              {(contact?.resumeUrl || contact?.cvUrl) && (
-                <div className="flex flex-wrap gap-3 pt-2">
+          {/* Right — documents & social links */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="space-y-6"
+          >
+            {(contact?.resumeUrl || contact?.cvUrl) && (
+              <div className="glass-card p-8">
+                <h3 className="text-xl font-semibold text-white mb-6">My Documents</h3>
+                <div className="flex flex-wrap gap-4">
                   {contact.resumeUrl && (
                     <a
                       href={contact.resumeUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 rounded-lg bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 hover:bg-cyan-500/20 transition-colors text-sm font-medium"
+                      className="group relative inline-flex items-center gap-3 px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold text-base shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:scale-105 transition-all duration-300"
                     >
-                      <FiFileText /> Resume
+                      <FiFileText className="text-lg" />
+                      Resume
+                      <span className="absolute inset-0 rounded-xl bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </a>
                   )}
                   {contact.cvUrl && (
@@ -104,22 +117,16 @@ const Contact = ({ contact }) => {
                       href={contact.cvUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-500/10 text-blue-400 border border-blue-500/20 hover:bg-blue-500/20 transition-colors text-sm font-medium"
+                      className="group relative inline-flex items-center gap-3 px-6 py-3 rounded-xl border-2 border-blue-400 text-blue-400 font-semibold text-base hover:bg-blue-400 hover:text-white hover:shadow-lg hover:shadow-blue-500/25 hover:scale-105 transition-all duration-300"
                     >
-                      <FiFileText /> CV
+                      <FiFileText className="text-lg" />
+                      CV
                     </a>
                   )}
                 </div>
-              )}
-            </div>
-          </motion.div>
+              </div>
+            )}
 
-          {/* Right — social links */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.4 }}
-          >
             <div className="glass-card p-8">
               <h3 className="text-xl font-semibold text-white mb-6">Connect With Me</h3>
               <div className="grid grid-cols-2 gap-3">
