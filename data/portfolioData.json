@@ -10,41 +10,43 @@
     {
       "category": "Frontend",
       "items": [
-        "React",
+        "HTML",
+        "CSS",
         "JavaScript",
-        "TypeScript",
-        "HTML5",
-        "CSS3",
+        "Bootstrap",
         "Tailwind CSS"
       ]
     },
     {
       "category": "Backend",
       "items": [
-        "Node.js",
-        "Express",
-        "Python",
-        "Django",
-        "REST APIs"
+        "PHP"
       ]
     },
     {
       "category": "Database",
       "items": [
-        "MongoDB",
-        "PostgreSQL",
         "MySQL",
-        "Redis"
+        "PostgreSQL"
+      ]
+    },
+    {
+      "category": "AI / ML Concepts",
+      "items": [
+        "Machine Learning",
+        "Deep Learning",
+        "Natural Language Processing (NLP)",
+        "Large Language Models (LLMs)",
+        "Image Processing"
       ]
     },
     {
       "category": "Tools & Others",
       "items": [
         "Git",
-        "Docker",
-        "AWS",
-        "Linux",
-        "CI/CD",
+        "GitHub",
+        "phpMyAdmin",
+        "pgAdmin 4",
         "Figma"
       ]
     }
@@ -52,17 +54,21 @@
   "projects": [
     {
       "id": 1,
-      "title": "Direct-Edge",
-      "description": "A full-featured e-commerce platform with cart, checkout, payment integration, and admin dashboard.",
-      "image": "",
+      "title": "DirectEdge",
+      "description": "DirectEdge is a web-based supply chain management system that connects warehouses, agents, and retail shop owners. It enables inventory tracking, order processing, and stock distribution through role-based access, helping manage warehouse capacity, product inventory, and order lifecycle while reducing intermediaries and operational costs.",
+      "image": "direct-edge.png",
       "technologies": [
-        "React",
-        "Node.js",
-        "MongoDB",
-        "Stripe"
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "PHP",
+        "MySQL",
+        "phpMyAdmin",
+        "Git"
       ],
       "liveUrl": "",
-      "githubUrl": ""
+      "githubUrl": "https://github.com/TashinParvez/direct-edge",
+      "subtitle": "A Warehouse & Supply Chain Management System"
     },
     {
       "id": 2,
