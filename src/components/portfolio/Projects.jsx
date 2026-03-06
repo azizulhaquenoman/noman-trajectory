@@ -47,9 +47,14 @@ const Projects = ({ projects }) => {
               </div>
 
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                <h3 className="text-xl font-semibold text-white mb-1 group-hover:text-cyan-400 transition-colors">
                   {project.title}
                 </h3>
+                {project.subtitle && (
+                  <p className="text-cyan-400/70 text-sm font-medium mb-2">
+                    {project.subtitle}
+                  </p>
+                )}
                 <p className="text-slate-400 text-sm mb-4 line-clamp-3">
                   {project.description}
                 </p>

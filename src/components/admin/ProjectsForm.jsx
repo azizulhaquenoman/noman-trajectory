@@ -9,6 +9,7 @@ const ProjectsForm = ({ data, onChange }) => {
     const newProject = {
       id: Date.now(),
       title: '',
+      subtitle: '',
       description: '',
       image: '',
       technologies: [],
@@ -86,6 +87,17 @@ const ProjectsForm = ({ data, onChange }) => {
                     onChange={(e) => updateProject(project.id, 'title', e.target.value)}
                     className="w-full px-4 py-2 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500 transition-colors"
                     placeholder="Project name"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-slate-300 mb-1">Subtitle</label>
+                  <input
+                    type="text"
+                    value={project.subtitle || ''}
+                    onChange={(e) => updateProject(project.id, 'subtitle', e.target.value)}
+                    className="w-full px-4 py-2 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500 transition-colors"
+                    placeholder="Short subtitle for the project"
                   />
                 </div>
 
