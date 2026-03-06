@@ -8,8 +8,8 @@ const navLinks = [
   { name: 'Projects', href: '#projects' },
   { name: 'Experience', href: '#experience' },
   { name: 'Education', href: '#education' },
-  { name: 'Documents', href: '#contact' },
   { name: 'Contact', href: '#contact' },
+  { name: 'Documents', href: '#contact' },
 ]
 
 const Navbar = ({ name }) => {
@@ -64,10 +64,12 @@ const Navbar = ({ name }) => {
               key={link.name}
               href={link.href}
               onClick={(e) => handleClick(e, link.href)}
-              className={`text-sm font-medium transition-colors duration-200 ${
-                activeSection === link.href.substring(1)
-                  ? 'text-cyan-400'
-                  : 'text-slate-400 hover:text-white'
+              className={`text-sm font-medium transition-all duration-200 ${
+                link.name === 'Documents'
+                  ? 'px-4 py-1.5 rounded-full bg-slate-800/80 text-slate-400 shadow-[0_2px_8px_rgba(0,0,0,0.4)] hover:text-white'
+                  : activeSection === link.href.substring(1)
+                    ? 'text-cyan-400'
+                    : 'text-slate-400 hover:text-white'
               }`}
             >
               {link.name}
@@ -91,10 +93,12 @@ const Navbar = ({ name }) => {
               key={link.name}
               href={link.href}
               onClick={(e) => handleClick(e, link.href)}
-              className={`block py-2 text-sm font-medium transition-colors ${
-                activeSection === link.href.substring(1)
-                  ? 'text-cyan-400'
-                  : 'text-slate-400 hover:text-white'
+              className={`block py-2 text-sm font-medium transition-all ${
+                link.name === 'Documents'
+                  ? 'px-3 rounded-lg bg-slate-800/80 text-slate-400 shadow-[0_2px_8px_rgba(0,0,0,0.4)]'
+                  : activeSection === link.href.substring(1)
+                    ? 'text-cyan-400'
+                    : 'text-slate-400 hover:text-white'
               }`}
             >
               {link.name}
