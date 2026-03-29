@@ -85,7 +85,7 @@ const Hero = ({ data }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 1 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2"
+          className="mt-8 flex justify-center"
         >
           <a
             href="#about"
