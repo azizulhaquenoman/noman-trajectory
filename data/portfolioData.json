@@ -41,7 +41,7 @@
       ]
     },
     {
-      "category": "Tools & Others",
+      "category": "Tools",
       "items": [
         "Git",
         "GitHub",
@@ -69,60 +69,9 @@
       "liveUrl": "",
       "githubUrl": "https://github.com/TashinParvez/direct-edge",
       "subtitle": "A Warehouse & Supply Chain Management System"
-    },
-    {
-      "id": 2,
-      "title": "Task Management App",
-      "description": "A collaborative task management application with real-time updates, drag & drop, and team features.",
-      "image": "",
-      "technologies": [
-        "React",
-        "Firebase",
-        "Tailwind CSS"
-      ],
-      "liveUrl": "",
-      "githubUrl": ""
-    },
-    {
-      "id": 3,
-      "title": "Weather Dashboard",
-      "description": "A beautiful weather dashboard showing current conditions, forecasts, and historical data with interactive charts.",
-      "image": "",
-      "technologies": [
-        "React",
-        "Chart.js",
-        "OpenWeather API"
-      ],
-      "liveUrl": "",
-      "githubUrl": ""
     }
   ],
-  "experience": [
-    {
-      "id": 1,
-      "company": "Tech Company",
-      "role": "Senior Developer",
-      "duration": "2022 - Present",
-      "description": "Leading the frontend team in building scalable web applications. Implemented CI/CD pipelines and improved performance by 40%.",
-      "technologies": [
-        "React",
-        "TypeScript",
-        "AWS"
-      ]
-    },
-    {
-      "id": 2,
-      "company": "Startup Inc",
-      "role": "Full Stack Developer",
-      "duration": "2020 - 2022",
-      "description": "Built and maintained multiple client-facing applications. Collaborated with design team to deliver pixel-perfect UIs.",
-      "technologies": [
-        "Vue.js",
-        "Node.js",
-        "PostgreSQL"
-      ]
-    }
-  ],
+  "experience": [],
   "education": [
     {
       "id": 1,
@@ -141,8 +90,8 @@
       "01851604135"
     ],
     "location": "QCXP+68X Dhaka, Bangladesh",
-    "resumeUrl": "Resume of Azizul Haque Noman.pdf",
-    "cvUrl": "",
+    "resumeUrl": "Noman_s_Resume.pdf",
+    "cvUrl": "Noman_s_CV.pdf",
     "social": {
       "github": "https://github.com/azizulhaquenoman",
       "linkedin": "https://www.linkedin.com/in/azizulhaquenoman",
