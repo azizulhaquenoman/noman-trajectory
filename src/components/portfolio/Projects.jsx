@@ -20,7 +20,7 @@ const Projects = ({ projects }) => {
           <div className="w-20 h-1 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mb-12" />
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
           {projects?.map((project, index) => (
             <motion.div
               key={project.id || index}
@@ -29,7 +29,7 @@ const Projects = ({ projects }) => {
               transition={{ duration: 0.5, delay: 0.1 * index }}
               className="glass-card overflow-hidden group hover:border-cyan-500/30 transition-all duration-300 hover:-translate-y-1"
             >
-              <div className="h-48 bg-gradient-to-br from-slate-700 to-slate-800 relative overflow-hidden">
+              <div className="h-56 bg-gradient-to-br from-slate-700 to-slate-800 relative overflow-hidden">
                 {project.image ? (
                   <img
                     src={project.image}
@@ -43,21 +43,10 @@ const Projects = ({ projects }) => {
                     </span>
                   </div>
                 )}
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/20 to-transparent" />
               </div>
 
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-white mb-1 group-hover:text-cyan-400 transition-colors">
-                  {project.title}
-                </h3>
-                {project.subtitle && (
-                  <p className="text-cyan-400/70 text-sm font-medium mb-2">
-                    {project.subtitle}
-                  </p>
-                )}
-                <p className="text-slate-400 text-sm mb-4 line-clamp-3">
-                  {project.description}
-                </p>
+              <div className="p-6 sm:p-7">
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies?.map((tech, i) => (
                     <span key={i} className="px-2 py-0.5 text-xs bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20">
@@ -65,7 +54,22 @@ const Projects = ({ projects }) => {
                     </span>
                   ))}
                 </div>
-                <div className="flex gap-3">
+
+                <h3 className="text-xl sm:text-2xl font-semibold text-white mb-2 leading-tight group-hover:text-cyan-400 transition-colors">
+                  {project.title}
+                </h3>
+
+                {project.subtitle && (
+                  <p className="text-cyan-400/75 text-sm font-medium mb-3">
+                    {project.subtitle}
+                  </p>
+                )}
+
+                <p className="text-slate-400 text-sm sm:text-base mb-6 line-clamp-3">
+                  {project.description}
+                </p>
+
+                <div className="flex flex-wrap items-center gap-x-5 gap-y-3 border-t border-slate-700/50 pt-4">
                   {project.liveUrl && (
                     <a
                       href={project.liveUrl}
