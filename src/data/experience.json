@@ -1,0 +1,46 @@
+{
+  "intro": {
+    "headline": "Experience is built, not handed.",
+    "description": "No job title on a business card yet. What exists instead are years of shipping things that actually work — platforms that beat 55+ teams in competitions, research that earned an IEEE publication, and code that powers real, running systems. This timeline is where it all lives."
+  },
+  "timeline": [
+    {
+      "id": "ieee-2025",
+      "year": "2025",
+      "title": "IEEE Published Researcher",
+      "organization": "IEEE TENSYMP 2025",
+      "type": "research",
+      "icon": "📄",
+      "description": "Co-authored and published a deep learning research paper on vehicle detection and multi-camera route tracking from CCTV images. Presented at IEEE TENSYMP, an international conference."
+    },
+    {
+      "id": "directedge-2025",
+      "year": "2025",
+      "title": "1st Runner-Up — Software Engineering Project Show",
+      "organization": "United International University",
+      "type": "achievement",
+      "icon": "🥈",
+      "description": "Built DirectEdge — an AI-powered agricultural supply chain platform with demand forecasting and computer vision — and placed 1st Runner-Up out of 55 competing teams."
+    },
+    {
+      "id": "kairos-2024",
+      "year": "2024",
+      "title": "Double Champion — CSE Project Show",
+      "organization": "United International University",
+      "type": "achievement",
+      "icon": "🏆",
+      "description": "Won two Champion titles in one semester with Kairos: Project Category (DBMS) and Poster Presentation, defeating 71 competing teams across both tracks."
+    },
+    {
+      "id": "uiu-2022",
+      "year": "2022 – Present",
+      "title": "Undergraduate Researcher & Developer",
+      "organization": "United International University",
+      "type": "education",
+      "icon": "🎓",
+      "description": "Studying CSE with hands-on focus — building full-stack platforms, publishing AI research, and competing in project shows every semester. CGPA: 3.61 / 4.00."
+    }
+  ],
+  "cta": "Currently open to internships and collaborative opportunities in AI/ML and software development.",
+  "workEntryGuide": "To add real work experience later: insert a new object in the 'timeline' array with fields: id, year, title, organization, type (work/research/achievement/education), icon (emoji), description."
+}

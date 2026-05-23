@@ -1,0 +1,36 @@
+{
+  "publications": [
+    {
+      "id": "autotrack",
+      "title": "AutoTrack: A Deep Learning Approach on a Novel Dataset for Vehicle Detection and Route Tracking from CCTV Images",
+      "conference": "IEEE TENSYMP 2025",
+      "conferenceFullName": "IEEE Region 10 Symposium (TENSYMP)",
+      "year": "2025",
+      "shortDesc": "Teaching machines to follow the trail — reconstructing a vehicle's full journey across a city's surveillance network using deep learning.",
+      "fullDesc": "AutoTrack presents an end-to-end deep learning pipeline for vehicle detection, license plate recognition, and multi-camera route tracking using CCTV footage. The core challenge: given any vehicle, automatically determine where it has been across an entire city's surveillance network. We constructed a novel annotated dataset for this task and developed a system that goes from raw CCTV frames to a fully reconstructed vehicle trajectory — with direct applications in traffic monitoring, hit-and-run investigation, and smart city infrastructure.",
+      "image": "/assets/images/projects/autotrack.jpg",
+      "fallbackColor": "#ef4444",
+      "fallbackIcon": "🎥",
+      "fallbackLabel": "Computer Vision",
+      "tech": ["Python", "Deep Learning", "Computer Vision", "YOLO", "PyTorch", "Image Processing", "Custom Dataset", "Route Visualization"],
+      "links": {
+        "paper": "https://ieeexplore.ieee.org/search/searchresult.jsp?queryText=AutoTrack+Vehicle+Detection+Route+Tracking+CCTV",
+        "code": "https://github.com/itsrifathridoy/Hit-And-Run-Case",
+        "dataset": "https://universe.roboflow.com/"
+      },
+      "note": "Update the 'paper' link above with your exact IEEE Xplore DOI URL once published.",
+      "contributions": [
+        "Constructed a novel annotated dataset specifically for CCTV-based vehicle route tracking",
+        "End-to-end pipeline: vehicle detection → license plate recognition → cross-camera re-identification",
+        "Multi-camera route reconstruction across discontinuous surveillance feeds",
+        "Route visualization system for forensic investigation and traffic monitoring",
+        "Published and presented at IEEE TENSYMP 2025 international conference"
+      ],
+      "gallery": [
+        { "url": "/assets/images/projects/autotrack-1.jpg", "caption": "Vehicle Detection Pipeline" },
+        { "url": "/assets/images/projects/autotrack-2.jpg", "caption": "License Plate Recognition" },
+        { "url": "/assets/images/projects/autotrack-3.jpg", "caption": "Multi-Camera Route Map" }
+      ]
+    }
+  ]
+}

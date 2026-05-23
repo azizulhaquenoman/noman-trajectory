@@ -1,0 +1,48 @@
+{
+  "education": [
+    {
+      "institution": "United International University",
+      "shortName": "UIU",
+      "degree": "Bachelor of Science in Computer Science and Engineering",
+      "shortDegree": "BSc in CSE",
+      "period": "February 2022 – Present",
+      "cgpa": "3.61 / 4.00",
+      "location": "Dhaka, Bangladesh",
+      "website": "https://uiu.ac.bd",
+      "description": "Studying Computer Science & Engineering with a focus on AI/ML, intelligent systems, and applied software development. Every semester has been an exercise in building things that matter — winning competitions, publishing research, and writing code that runs real platforms.",
+      "coursework": [
+        "Data Structures & Algorithms",
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Data Mining",
+        "Database Management Systems",
+        "Software Engineering",
+        "Software Architecture",
+        "System Analysis & Design",
+        "Project Management"
+      ],
+      "highlights": [
+        {
+          "icon": "🏆",
+          "title": "Double Champion",
+          "detail": "UIU CSE Project Show (Spring '24) — DBMS Category & Poster Presentation, from 71 competing teams"
+        },
+        {
+          "icon": "🥈",
+          "title": "1st Runner-Up",
+          "detail": "UIU CSE Project Show (Summer '25) — Software Engineering Category, from 55 competing teams"
+        },
+        {
+          "icon": "📄",
+          "title": "IEEE Published",
+          "detail": "Co-authored a research paper published at IEEE TENSYMP 2025 international conference"
+        },
+        {
+          "icon": "🔬",
+          "title": "Active Researcher",
+          "detail": "Built a novel annotated dataset and deep learning pipeline for multi-camera vehicle tracking"
+        }
+      ]
+    }
+  ]
+}

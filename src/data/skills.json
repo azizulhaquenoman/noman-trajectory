@@ -1,0 +1,60 @@
+{
+  "categories": [
+    {
+      "id": "aiml",
+      "name": "AI / Machine Learning",
+      "icon": "Brain",
+      "accentColor": "#8b5cf6",
+      "skills": [
+        "Python", "Machine Learning", "Deep Learning",
+        "Computer Vision", "Image Processing", "NLP",
+        "Large Language Models", "PyTorch", "scikit-learn",
+        "YOLOv8", "Data Mining"
+      ]
+    },
+    {
+      "id": "frontend",
+      "name": "Frontend",
+      "icon": "Monitor",
+      "accentColor": "#00c8ff",
+      "skills": [
+        "HTML5", "CSS3", "JavaScript",
+        "React.js", "Bootstrap", "Tailwind CSS",
+        "JavaFX", "Responsive Design"
+      ]
+    },
+    {
+      "id": "backend",
+      "name": "Backend & Database",
+      "icon": "Server",
+      "accentColor": "#10b981",
+      "skills": [
+        "PHP", "Node.js", "Express.js", "FastAPI",
+        "MySQL", "PostgreSQL", "Socket.IO",
+        "REST APIs", "Prisma", "Maven"
+      ]
+    },
+    {
+      "id": "languages",
+      "name": "Programming Languages",
+      "icon": "Code",
+      "accentColor": "#f59e0b",
+      "skills": [
+        "Python", "JavaScript", "Java", "C++", "PHP"
+      ]
+    },
+    {
+      "id": "tools",
+      "name": "Tools & Practices",
+      "icon": "Wrench",
+      "accentColor": "#64748b",
+      "skills": [
+        "Git", "GitHub", "Postman", "Figma",
+        "pgAdmin4", "phpMyAdmin",
+        "OOP", "Data Structures & Algorithms",
+        "Database Design", "Software Architecture",
+        "System Analysis & Design"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "email": "azizulhaquenoman@gmail.com",
+  "phone": "+880 1851-604135",
+  "location": "Dhaka, Bangladesh",
+  "formRecipient": "azizulhaquenoman@gmail.com",
+  "social": {
+    "github": "https://github.com/azizulhaquenoman",
+    "linkedin": "https://www.linkedin.com/in/azizulhaquenoman/",
+    "twitter": "https://x.com/azizul_noman",
+    "instagram": "https://www.instagram.com/azizulhaquenoman/"
+  },
+  "emailjs": {
+    "serviceIdEnv": "VITE_EMAILJS_SERVICE_ID",
+    "templateIdEnv": "VITE_EMAILJS_TEMPLATE_ID",
+    "publicKeyEnv": "VITE_EMAILJS_PUBLIC_KEY"
+  },
+  "availability": "Open to internships, collaborations, and full-time opportunities in AI/ML and software development."
+}

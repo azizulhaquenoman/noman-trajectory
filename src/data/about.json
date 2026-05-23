@@ -1,0 +1,34 @@
+{
+  "name": "Azizul Haque Noman",
+  "title": "BSc CSE Student at UIU",
+  "tagline": "Building toward AI/ML Engineering",
+  "rotatingRoles": [
+    "AI/ML Enthusiast",
+    "Full Stack Developer",
+    "Computer Vision Researcher",
+    "IEEE Published Author",
+    "Problem Solver"
+  ],
+  "summary": "I'm a Computer Science & Engineering student at United International University, navigating the intersection of software development and artificial intelligence. I build systems that solve real problems — from supply chain platforms that beat 55 teams to deep learning models published in IEEE — driven by one clear goal: becoming an AI/ML Engineer.\n\nDevelopment is my foundation. AI/ML is my direction. Everything I build is a step toward that intersection where intelligent systems meet the real world.",
+  "photo": "/assets/images/profile.jpg",
+  "location": "Dhaka, Bangladesh",
+  "email": "azizulhaquenoman@gmail.com",
+  "phone": "+880 1851-604135",
+  "university": "United International University",
+  "openToWork": true,
+  "status": "Open to Opportunities",
+  "stats": [
+    { "value": "5+", "label": "Projects Built" },
+    { "value": "3", "label": "Awards Won" },
+    { "value": "1", "label": "IEEE Paper" },
+    { "value": "3.61", "label": "CGPA" }
+  ],
+  "social": {
+    "github": "https://github.com/azizulhaquenoman",
+    "linkedin": "https://www.linkedin.com/in/azizulhaquenoman/",
+    "twitter": "https://x.com/azizul_noman",
+    "facebook": "https://www.facebook.com/azizul.haque.noman.00",
+    "instagram": "https://www.instagram.com/azizulhaquenoman/"
+  },
+  "resume": "/assets/resume.pdf"
+}

@@ -1,0 +1,164 @@
+{
+  "projects": [
+    {
+      "id": "directedge",
+      "title": "DirectEdge",
+      "category": "Full Stack",
+      "shortDesc": "Cutting out the middlemen — a smart supply chain that connects farmers, distributors, and shop owners directly.",
+      "fullDesc": "DirectEdge reimagines the agricultural supply chain by eliminating inefficiencies caused by middlemen. It's a three-sided platform where farmers manage crop listings in real time, distributors handle warehouse logistics, and shop owners gain AI-powered inventory management with demand forecasting. Computer vision powers automatic receipt generation, while ML models predict stock needs before shortages occur.",
+      "image": "/assets/images/projects/directedge.jpg",
+      "fallbackColor": "#f59e0b",
+      "fallbackIcon": "🌾",
+      "fallbackLabel": "Supply Chain",
+      "tech": ["PHP", "MySQL", "JavaScript", "HTML", "CSS", "Tailwind CSS", "Node.js", "FastAPI", "React.js", "Flutter"],
+      "github": "https://github.com/TashinParvez/direct-edge",
+      "live": null,
+      "award": {
+        "badge": "🥈 1st Runner-Up",
+        "title": "UIU CSE Project Show — Summer 2025",
+        "subtitle": "Software Engineering Category · 55 competing teams",
+        "link": "https://cse.uiu.ac.bd/projects/software-engineering-laboratory/?rank=1st-runner-up"
+      },
+      "features": [
+        "Real-time crop listing and inventory management for farmers",
+        "AI-powered demand forecasting using ML (scikit-learn / XGBoost)",
+        "Computer vision-based receipt generation for shops",
+        "Multi-role dashboards: Farmer, Distributor, Shop Owner, Admin",
+        "Delivery scheduling and warehouse management module",
+        "Personalized coupons, ratings, and email confirmations",
+        "Analytics and reporting dashboard for all roles"
+      ],
+      "gallery": [
+        { "url": "/assets/images/projects/directedge-1.jpg", "caption": "Farmer Dashboard" },
+        { "url": "/assets/images/projects/directedge-2.jpg", "caption": "Inventory & Demand Forecast" },
+        { "url": "/assets/images/projects/directedge-3.jpg", "caption": "Shop Owner Panel" }
+      ]
+    },
+    {
+      "id": "kairos",
+      "title": "Kairos",
+      "category": "Full Stack",
+      "shortDesc": "Your personal growth OS — goals, habits, journaling, and accountability all woven into one digital ecosystem.",
+      "fullDesc": "Kairos (Greek for 'the right moment') is a life management web application built as a digital companion for intentional living. Rather than a simple to-do app, it weaves together goal tracking, daily journaling, habit monitoring, blogging, and community features into one unified ecosystem. The platform is designed around the idea that lasting growth needs structure, reflection, and accountability together.",
+      "image": "/assets/images/projects/kairos.jpg",
+      "fallbackColor": "#8b5cf6",
+      "fallbackIcon": "⏰",
+      "fallbackLabel": "Growth Platform",
+      "tech": ["PHP", "MySQL", "HTML", "CSS", "JavaScript", "Bootstrap"],
+      "github": "https://github.com/TashinParvez/Kairos",
+      "live": null,
+      "award": {
+        "badge": "🏆 Champion",
+        "title": "UIU CSE Project Show — Spring 2024",
+        "subtitle": "Database Management Systems Category · 71 competing teams",
+        "link": "https://cse.uiu.ac.bd/projects/database-management-systems-laboratory-2/?rank=champion"
+      },
+      "features": [
+        "Goal tracking with deadlines, milestones, and completion status",
+        "Anti-procrastination module with structured accountability",
+        "Private journal for daily reflection and emotional tracking",
+        "Good/bad event logging for behavioral pattern awareness",
+        "Community blog with post creation and social interaction",
+        "Self-learning portal with curated resources",
+        "Admin moderation dashboard for platform management",
+        "Session-based authentication with protected routes"
+      ],
+      "gallery": [
+        { "url": "/assets/images/projects/kairos-1.jpg", "caption": "Goal Tracking Dashboard" },
+        { "url": "/assets/images/projects/kairos-2.jpg", "caption": "Journaling Interface" },
+        { "url": "/assets/images/projects/kairos-3.jpg", "caption": "Community Blog" }
+      ]
+    },
+    {
+      "id": "cookcorner",
+      "title": "Cook Corner",
+      "category": "Full Stack",
+      "shortDesc": "Turn what's in your fridge into what's on your plate — a smart culinary companion built for real kitchens.",
+      "fullDesc": "Cook Corner solves the daily dilemma of 'what should I cook?' by combining recipe discovery, nutrition-aware meal planning, ingredient-based recipe generation, and grocery assistance into one platform. Built for home cooks, health-conscious users, and food lovers who want to cook smarter, waste less, and eat better.",
+      "image": "/assets/images/projects/cookcorner.jpg",
+      "fallbackColor": "#10b981",
+      "fallbackIcon": "🍳",
+      "fallbackLabel": "Smart Kitchen",
+      "tech": ["PHP", "MySQL", "HTML", "CSS", "JavaScript", "Bootstrap"],
+      "github": "https://github.com/TashinParvez/Cook-Corner",
+      "live": null,
+      "award": null,
+      "features": [
+        "Ingredient-based recipe generation (cook with what you have)",
+        "Nutrition-aware meal planning with calorie and macro tracking",
+        "Recipe discovery by cuisine, occasion, and dietary preference",
+        "Grocery list generation and shopping assistance",
+        "Cooking courses and kitchen tips educational section",
+        "Personalized recipe recommendations engine",
+        "Meal history and nutritional progress tracking"
+      ],
+      "gallery": [
+        { "url": "/assets/images/projects/cookcorner-1.jpg", "caption": "Recipe Discovery" },
+        { "url": "/assets/images/projects/cookcorner-2.jpg", "caption": "Meal Planning" },
+        { "url": "/assets/images/projects/cookcorner-3.jpg", "caption": "Nutrition Dashboard" }
+      ]
+    },
+    {
+      "id": "healthcare",
+      "title": "UIU Health Care Management",
+      "category": "Full Stack",
+      "shortDesc": "Digitizing university healthcare — from booking an appointment to chatting with your doctor in real time.",
+      "fullDesc": "Built for United International University, this platform centralizes all campus medical services into one role-based system. Patients book appointments and track medical history; doctors manage schedules and patient data; admins monitor the full healthcare ecosystem with real-time dashboards. A dedicated Socket.IO chat module enables direct doctor-patient communication without leaving the platform.",
+      "image": "/assets/images/projects/healthcare.jpg",
+      "fallbackColor": "#00c8ff",
+      "fallbackIcon": "🏥",
+      "fallbackLabel": "Healthcare",
+      "tech": ["PHP", "MySQL", "JavaScript", "Node.js", "Express", "Socket.IO", "HTML", "CSS"],
+      "github": "https://github.com/TashinParvez/UIU-HealthCare-Management",
+      "live": null,
+      "award": null,
+      "features": [
+        "Role-based system: Admin, Doctor, and Patient dashboards",
+        "Appointment booking, scheduling, and history tracking",
+        "Multiple payment methods: Cash, Card, Mobile Banking",
+        "Real-time one-to-one chat (Node.js + Express + Socket.IO)",
+        "Doctor schedule management and patient data module",
+        "Emergency alerts and admin monitoring dashboard",
+        "Complete patient profile and medical history management",
+        "FAQ and support section for patients"
+      ],
+      "gallery": [
+        { "url": "/assets/images/projects/healthcare-1.jpg", "caption": "Patient Dashboard" },
+        { "url": "/assets/images/projects/healthcare-2.jpg", "caption": "Appointment Booking" },
+        { "url": "/assets/images/projects/healthcare-3.jpg", "caption": "Real-time Chat" }
+      ]
+    },
+    {
+      "id": "codecampus",
+      "title": "codeCAMPUSTrail",
+      "category": "Desktop App",
+      "shortDesc": "One campus, one platform — where students compete, ask questions, and learn alongside their teachers.",
+      "fullDesc": "codeCAMPUSTrail is a JavaFX desktop application that creates a unified digital campus experience. It's a social and educational hybrid where students and teachers interact through a news feed, share announcements, run coding contests, post queries, access learning resources, and chat in real time. The app features smooth AnimateFX animations and an auto-typing welcome screen that makes it feel alive.",
+      "image": "/assets/images/projects/codecampus.jpg",
+      "fallbackColor": "#eab308",
+      "fallbackIcon": "🏫",
+      "fallbackLabel": "Campus Platform",
+      "tech": ["Java", "JavaFX", "MySQL", "Maven", "AnimateFX", "CSS"],
+      "github": "https://github.com/musfiqurR661/codeCAMPUSTrail",
+      "live": null,
+      "award": null,
+      "features": [
+        "Role-based access: separate Student and Teacher dashboards",
+        "News feed with post creation and community interaction",
+        "Coding contests with leaderboard and ranking system",
+        "Announcement system managed by teachers",
+        "Query feed for student questions and peer answers",
+        "Learning portal with curated educational resources",
+        "Real-time chat room (custom client-server in Java)",
+        "Smooth UI animations via AnimateFX library",
+        "Embedded web browser integration within the app",
+        "Auto-typing animation on the welcome screen"
+      ],
+      "gallery": [
+        { "url": "/assets/images/projects/codecampus-1.jpg", "caption": "Home Dashboard" },
+        { "url": "/assets/images/projects/codecampus-2.jpg", "caption": "Contest Feed" },
+        { "url": "/assets/images/projects/codecampus-3.jpg", "caption": "Chat System" }
+      ]
+    }
+  ]
+}
