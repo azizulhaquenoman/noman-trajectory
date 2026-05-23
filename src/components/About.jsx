@@ -60,7 +60,7 @@ export default function About() {
               </div>
 
               {/* Floating badge — location */}
-              <div style={{
+              {/* <div style={{
                 position: 'absolute', bottom: -14, right: -14, zIndex: 2,
                 background: 'var(--bg-surface)',
                 border: '1px solid var(--border)',
@@ -72,7 +72,7 @@ export default function About() {
                 whiteSpace: 'nowrap',
               }}>
                 <span>📍</span> {location}
-              </div>
+              </div> */}
             </div>
 
             {/* Stats row */}
