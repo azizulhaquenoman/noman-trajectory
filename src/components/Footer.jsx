@@ -40,7 +40,7 @@ export default function Footer() {
               fontWeight: 700, fontSize: '1.1rem',
               color: 'var(--accent)',
             }}>
-              Noman<span style={{ color: 'var(--text-subtle)' }}>.</span>
+              {/* Noman<span style={{ color: 'var(--text-subtle)' }}>.</span> */}
             </span>
             <span style={{ color: 'var(--text-subtle)', fontSize: '0.78rem' }}>
               © {year} {name}. Built with React.
