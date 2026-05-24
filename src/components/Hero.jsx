@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useRef } from 'react';
 import NeuralNebula from './NeuralNebula';
 import aboutData from '../data/about.json';
 import {
@@ -41,9 +42,26 @@ function Typewriter({ words }) {
 export default function Hero() {
   const { social, resume, rotatingRoles } = aboutData;
   const scrollTo = (id) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  const heroRef = useRef(null);
+  const [showScrollIndicator, setShowScrollIndicator] = useState(true);
+
+  useEffect(() => {
+    const heroEl = heroRef.current;
+    if (!heroEl) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setShowScrollIndicator(entry.isIntersecting && entry.intersectionRatio > 0.70);
+      },
+      { threshold: [0, 0.35, 0.4, 0.45, 1] }
+    );
+
+    observer.observe(heroEl);
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <section id="hero" style={{
+    <section id="hero" ref={heroRef} style={{
       minHeight: '100vh', display: 'flex', alignItems: 'center',
       background: 'radial-gradient(ellipse 70% 60% at 20% 50%, rgba(0,200,255,0.04) 0%, transparent 65%), radial-gradient(ellipse 50% 50% at 80% 30%, rgba(139,92,246,0.06) 0%, transparent 60%), #06080f',
       position: 'relative', overflow: 'hidden', paddingTop: 64,
@@ -102,12 +120,14 @@ export default function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <div style={{ position: 'absolute', bottom: 28, left: '50%', transform: 'translateX(-50%)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6, opacity: 0, animation: 'heroFade 1s ease 1.6s forwards' }}>
-        <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.62rem', color: 'var(--text-subtle)', letterSpacing: '0.12em' }}>scroll</span>
-        <div style={{ width: 22, height: 36, border: '1.5px solid #334155', borderRadius: 12, display: 'flex', justifyContent: 'center', paddingTop: 6 }}>
-          <div style={{ width: 4, height: 8, background: 'var(--accent)', borderRadius: 2, animation: 'float 1.8s ease-in-out infinite' }} />
+      {showScrollIndicator && (
+        <div style={{ position: 'absolute', bottom: 28, left: '50%', transform: 'translateX(-50%)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6, opacity: 0, animation: 'heroFade 1s ease 1.6s forwards' }}>
+          <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.62rem', color: 'var(--text-subtle)', letterSpacing: '0.12em' }}>scroll</span>
+          <div style={{ width: 22, height: 36, border: '1.5px solid #334155', borderRadius: 12, display: 'flex', justifyContent: 'center', paddingTop: 6 }}>
+            <div style={{ width: 4, height: 8, background: 'var(--accent)', borderRadius: 2, animation: 'float 1.8s ease-in-out infinite' }} />
+          </div>
         </div>
-      </div>
+      )}
 
       <style>{`
         @keyframes heroSlide { from{opacity:0;transform:translateX(-22px)} to{opacity:1;transform:translateX(0)} }
