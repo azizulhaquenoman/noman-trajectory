@@ -7,6 +7,7 @@ import {
   FiDownload,
   SiGithub,
   SiInstagram,
+  SiFacebook,
   SiLinkedin,
   SiTwitter,
 } from './AppIcons';
@@ -98,11 +99,12 @@ export default function Hero() {
               <button className="btn btn-ghost" onClick={() => scrollTo('contact')}>Contact Me</button>
             </div>
             <div style={{ display: 'flex', gap: 10, alignItems: 'center', opacity: 0, animation: 'heroSlide 0.6s ease 0.94s forwards' }}>
-              <SocialIcon href={social.github} label="GitHub">    <SiGithub size={17} />   </SocialIcon>
-              <SocialIcon href={social.linkedin} label="LinkedIn">  <SiLinkedin size={17} /> </SocialIcon>
-              <SocialIcon href={social.twitter} label="Twitter/X"> <SiTwitter size={16} />  </SocialIcon>
-              <SocialIcon href={social.instagram} label="Instagram"> <SiInstagram size={16} />    </SocialIcon>
-              <span style={{ marginLeft: 8, fontSize: '0.74rem', fontFamily: 'var(--font-mono)', color: 'var(--text-subtle)' }}>@azizulhaquenoman</span>
+              {/* <SocialIcon href={social.github} label="GitHub">    <SiGithub size={17} />   </SocialIcon> */}
+              {/* <SocialIcon href={social.linkedin} label="LinkedIn">  <SiLinkedin size={17} /> </SocialIcon> */}
+              {/* <SocialIcon href={social.facebook} label="Facebook">  <SiFacebook size={16} /> </SocialIcon> */}
+              {/* <SocialIcon href={social.twitter} label="Twitter/X"> <SiTwitter size={16} />  </SocialIcon> */}
+              {/* <SocialIcon href={social.instagram} label="Instagram"> <SiInstagram size={16} />    </SocialIcon> */}
+              {/* <span style={{ marginLeft: 8, fontSize: '0.74rem', fontFamily: 'var(--font-mono)', color: 'var(--text-subtle)' }}>@azizulhaquenoman</span> */}
             </div>
           </div>
 
