@@ -1,19 +1,20 @@
 import { useState, useEffect } from 'react';
 import aboutData from '../data/about.json';
+import { FiDownload } from './AppIcons';
 
 const NAV_LINKS = [
-  { label: 'About',       href: '#about' },
-  { label: 'Skills',      href: '#skills' },
-  { label: 'Projects',    href: '#projects' },
-  { label: 'Research',    href: '#publications' },
-  { label: 'Experience',  href: '#experience' },
-  { label: 'Education',   href: '#education' },
-  { label: 'Contact',     href: '#contact' },
+  { label: 'About', href: '#about' },
+  { label: 'Skills', href: '#skills' },
+  { label: 'Projects', href: '#projects' },
+  { label: 'Research', href: '#publications' },
+  { label: 'Experience', href: '#experience' },
+  { label: 'Education', href: '#education' },
+  { label: 'Contact', href: '#contact' },
 ];
 
 export default function Navbar() {
-  const [scrolled,     setScrolled]     = useState(false);
-  const [menuOpen,     setMenuOpen]     = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
 
   /* Scroll → frosted glass + active section tracking */
@@ -92,8 +93,8 @@ export default function Navbar() {
                   background: isActive ? 'var(--accent-dim)' : 'transparent',
                   transition: 'var(--transition-fast)',
                 }}
-                onMouseEnter={e => { if (!isActive) { e.currentTarget.style.color = 'var(--text)'; e.currentTarget.style.background = 'var(--bg-hover)'; }}}
-                onMouseLeave={e => { if (!isActive) { e.currentTarget.style.color = 'var(--text-muted)'; e.currentTarget.style.background = 'transparent'; }}}
+                onMouseEnter={e => { if (!isActive) { e.currentTarget.style.color = 'var(--text)'; e.currentTarget.style.background = 'var(--bg-hover)'; } }}
+                onMouseLeave={e => { if (!isActive) { e.currentTarget.style.color = 'var(--text-muted)'; e.currentTarget.style.background = 'transparent'; } }}
               >
                 {link.label}
               </a>
@@ -134,9 +135,7 @@ export default function Navbar() {
             className="btn btn-outline btn-sm"
             style={{ display: 'flex', alignItems: 'center', gap: 6 }}
           >
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
-            </svg>
+            <FiDownload size={14} />
             Resume
           </a>
         </div>
@@ -214,7 +213,7 @@ export default function Navbar() {
               border: '1px solid rgba(16,185,129,0.25)',
               fontSize: '0.85rem', color: '#10b981',
             }}>
-              <span style={{ width:8, height:8, borderRadius:'50%', background:'#10b981', animation:'pulse-dot 2s ease-in-out infinite' }} />
+              <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#10b981', animation: 'pulse-dot 2s ease-in-out infinite' }} />
               Open to Opportunities
             </div>
           )}

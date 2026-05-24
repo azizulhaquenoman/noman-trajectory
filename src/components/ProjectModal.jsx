@@ -1,4 +1,29 @@
 import { useEffect, useState } from 'react';
+import {
+  FiArrowRight,
+  FiAward,
+  FiBookOpen,
+  FiCamera,
+  FiCode,
+  FiDatabase,
+  FiExternalLink,
+  FiFileText,
+  FiMonitor,
+  FiShoppingBag,
+  FiClock,
+  FiX,
+} from './AppIcons';
+
+const PREVIEW_ICON_BY_ID = {
+  directedge: FiShoppingBag,
+  kairos: FiClock,
+  cookcorner: FiBookOpen,
+  healthcare: FiMonitor,
+  codecampus: FiBookOpen,
+  autotrack: FiCamera,
+};
+
+const stripLeadingSymbol = (value) => value.replace(/^[^A-Za-z0-9]+\s*/, '');
 
 export default function ProjectModal({ item, onClose, isPublication }) {
   const [imgError, setImgError] = useState(false);
@@ -56,10 +81,10 @@ export default function ProjectModal({ item, onClose, isPublication }) {
             fontSize: '1.2rem', cursor: 'pointer',
             transition: 'var(--transition)',
           }}
-          onMouseEnter={e => { e.currentTarget.style.color='var(--accent)'; e.currentTarget.style.borderColor='var(--accent-border)'; }}
-          onMouseLeave={e => { e.currentTarget.style.color='var(--text-muted)'; e.currentTarget.style.borderColor='var(--border)'; }}
+          onMouseEnter={e => { e.currentTarget.style.color = 'var(--accent)'; e.currentTarget.style.borderColor = 'var(--accent-border)'; }}
+          onMouseLeave={e => { e.currentTarget.style.color = 'var(--text-muted)'; e.currentTarget.style.borderColor = 'var(--border)'; }}
         >
-          ✕
+          <FiX size={18} />
         </button>
 
         {/* Hero Image */}
@@ -83,7 +108,10 @@ export default function ProjectModal({ item, onClose, isPublication }) {
               gap: 12,
               background: `linear-gradient(135deg, ${item.fallbackColor}08 0%, var(--bg-card) 100%)`,
             }}>
-              <span style={{ fontSize: 60 }}>{item.fallbackIcon}</span>
+              {(() => {
+                const PreviewIcon = (isPublication ? FiFileText : PREVIEW_ICON_BY_ID[item.id]) || FiShoppingBag;
+                return <PreviewIcon size={60} color={item.fallbackColor} />;
+              })()}
               <span style={{
                 fontFamily: 'var(--font-mono)', fontSize: '0.7rem',
                 color: item.fallbackColor, letterSpacing: '0.12em',
@@ -116,7 +144,8 @@ export default function ProjectModal({ item, onClose, isPublication }) {
                 background: 'rgba(245,158,11,0.1)', color: '#f59e0b',
                 border: '1px solid rgba(245,158,11,0.25)',
               }}>
-                {item.award.badge}
+                <FiAward size={11} style={{ marginRight: 6, verticalAlign: 'text-bottom' }} />
+                {stripLeadingSymbol(item.award.badge)}
               </span>
             )}
             {item.year && (
@@ -158,7 +187,7 @@ export default function ProjectModal({ item, onClose, isPublication }) {
                 <div style={{ fontSize: '0.85rem', fontWeight: 600, color: '#f59e0b' }}>{item.award.title}</div>
                 <div style={{ fontSize: '0.76rem', color: 'var(--text-subtle)', marginTop: 2 }}>{item.award.subtitle}</div>
               </div>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" strokeWidth="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+              <FiExternalLink size={14} color="#f59e0b" />
             </a>
           )}
 
@@ -167,17 +196,17 @@ export default function ProjectModal({ item, onClose, isPublication }) {
             <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginBottom: 20 }}>
               {item.links.paper && (
                 <a href={item.links.paper} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-sm">
-                  📄 IEEE Paper
+                  <FiFileText size={13} style={{ marginRight: 6 }} /> IEEE Paper
                 </a>
               )}
               {item.links.code && (
                 <a href={item.links.code} target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-sm">
-                  ⌥ GitHub Code
+                  <FiCode size={13} style={{ marginRight: 6 }} /> GitHub Code
                 </a>
               )}
               {item.links.dataset && (
                 <a href={item.links.dataset} target="_blank" rel="noopener noreferrer" className="btn btn-ghost btn-sm">
-                  🗃 Dataset
+                  <FiDatabase size={13} style={{ marginRight: 6 }} /> Dataset
                 </a>
               )}
             </div>
@@ -230,7 +259,7 @@ export default function ProjectModal({ item, onClose, isPublication }) {
               )}
               {item.live && (
                 <a href={item.live} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-sm">
-                  ↗ Live Demo
+                  <FiArrowRight size={13} style={{ marginRight: 6 }} /> Live Demo
                 </a>
               )}
             </div>
@@ -262,7 +291,10 @@ export default function ProjectModal({ item, onClose, isPublication }) {
                         background: `${item.fallbackColor}08`,
                         fontSize: '2rem',
                       }}>
-                        {item.fallbackIcon}
+                        {(() => {
+                          const PreviewIcon = (isPublication ? FiFileText : PREVIEW_ICON_BY_ID[item.id]) || FiShoppingBag;
+                          return <PreviewIcon size={36} color={item.fallbackColor} />;
+                        })()}
                       </div>
                     )}
                     <div style={{ padding: '6px 10px', fontSize: '0.72rem', color: 'var(--text-subtle)' }}>

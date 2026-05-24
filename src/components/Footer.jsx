@@ -1,4 +1,19 @@
 import aboutData from '../data/about.json';
+import {
+  SiFacebook,
+  SiGithub,
+  SiInstagram,
+  SiLinkedin,
+  SiTwitter,
+} from './AppIcons';
+
+const SOCIAL_ICONS = {
+  github: SiGithub,
+  linkedin: SiLinkedin,
+  twitter: SiTwitter,
+  instagram: SiInstagram,
+  facebook: SiFacebook,
+};
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -34,29 +49,32 @@ export default function Footer() {
 
           {/* Right: social icons */}
           <div style={{ display: 'flex', gap: 10 }}>
-            {Object.entries(social).map(([platform, url]) => (
-              <a
-                key={platform}
-                href={url} target="_blank" rel="noopener noreferrer"
-                aria-label={platform}
-                style={{
-                  width: 32, height: 32, borderRadius: 7,
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  background: 'var(--bg-card)',
-                  border: '1px solid var(--border)',
-                  color: 'var(--text-subtle)',
-                  fontSize: '0.75rem',
-                  transition: 'var(--transition)',
-                  fontFamily: 'var(--font-mono)',
-                  fontWeight: 600,
-                  textTransform: 'uppercase',
-                }}
-                onMouseEnter={e => { e.currentTarget.style.color='var(--accent)'; e.currentTarget.style.borderColor='var(--accent-border)'; e.currentTarget.style.background='var(--accent-dim)'; }}
-                onMouseLeave={e => { e.currentTarget.style.color='var(--text-subtle)'; e.currentTarget.style.borderColor='var(--border)'; e.currentTarget.style.background='var(--bg-card)'; }}
-              >
-                {platform[0].toUpperCase()}
-              </a>
-            ))}
+            {Object.entries(social).map(([platform, url]) => {
+              const Icon = SOCIAL_ICONS[platform];
+              return (
+                <a
+                  key={platform}
+                  href={url} target="_blank" rel="noopener noreferrer"
+                  aria-label={platform}
+                  style={{
+                    width: 32, height: 32, borderRadius: 7,
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    background: 'var(--bg-card)',
+                    border: '1px solid var(--border)',
+                    color: 'var(--text-subtle)',
+                    fontSize: '0.75rem',
+                    transition: 'var(--transition)',
+                    fontFamily: 'var(--font-mono)',
+                    fontWeight: 600,
+                    textTransform: 'uppercase',
+                  }}
+                  onMouseEnter={e => { e.currentTarget.style.color = 'var(--accent)'; e.currentTarget.style.borderColor = 'var(--accent-border)'; e.currentTarget.style.background = 'var(--accent-dim)'; }}
+                  onMouseLeave={e => { e.currentTarget.style.color = 'var(--text-subtle)'; e.currentTarget.style.borderColor = 'var(--border)'; e.currentTarget.style.background = 'var(--bg-card)'; }}
+                >
+                  {Icon ? <Icon size={14} /> : platform[0].toUpperCase()}
+                </a>
+              );
+            })}
           </div>
         </div>
       </div>

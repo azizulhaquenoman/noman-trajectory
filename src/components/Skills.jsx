@@ -1,5 +1,20 @@
 import { useState } from 'react';
 import skillsData from '../data/skills.json';
+import {
+  FiCode,
+  FiLayers,
+  FiMonitor,
+  FiServer,
+  FiTool,
+} from './AppIcons';
+
+const CATEGORY_ICONS = {
+  aiml: FiLayers,
+  frontend: FiMonitor,
+  backend: FiServer,
+  languages: FiCode,
+  tools: FiTool,
+};
 
 export default function Skills() {
   const { categories } = skillsData;
@@ -65,11 +80,10 @@ export default function Skills() {
                   border: `1px solid ${cat.accentColor}30`,
                   fontSize: '1.1rem',
                 }}>
-                  {cat.id === 'aiml'      && '🧠'}
-                  {cat.id === 'frontend'  && '🎨'}
-                  {cat.id === 'backend'   && '⚙️'}
-                  {cat.id === 'languages' && '💻'}
-                  {cat.id === 'tools'     && '🔧'}
+                  {(() => {
+                    const Icon = CATEGORY_ICONS[cat.id] || FiTool;
+                    return <Icon size={18} color={cat.accentColor} />;
+                  })()}
                 </div>
                 <span style={{
                   fontFamily: 'var(--font-heading)',

@@ -1,4 +1,14 @@
 import educationData from '../data/education.json';
+import {
+  FiAward,
+  FiBookOpen,
+  FiCalendar,
+  FiFileText,
+  FiLayers,
+  FiMapPin,
+} from './AppIcons';
+
+const HIGHLIGHT_ICONS = [FiAward, FiAward, FiFileText, FiLayers];
 
 export default function Education() {
   const { education } = educationData;
@@ -34,7 +44,7 @@ export default function Education() {
               borderRadius: 10,
               marginBottom: 22,
             }}>
-              <span style={{ fontSize: '1.3rem' }}>🎓</span>
+              <FiBookOpen size={20} color="var(--accent)" />
               <span style={{
                 fontFamily: 'var(--font-mono)', fontSize: '0.72rem',
                 color: 'var(--accent)', letterSpacing: '0.08em',
@@ -58,10 +68,10 @@ export default function Education() {
 
             <div style={{ display: 'flex', gap: 16, marginBottom: 24, flexWrap: 'wrap' }}>
               <span style={{ fontSize: '0.82rem', color: 'var(--text-subtle)', display: 'flex', alignItems: 'center', gap: 5 }}>
-                📅 {edu.period}
+                <FiCalendar size={13} /> {edu.period}
               </span>
               <span style={{ fontSize: '0.82rem', color: 'var(--text-subtle)', display: 'flex', alignItems: 'center', gap: 5 }}>
-                📍 {edu.location}
+                <FiMapPin size={13} /> {edu.location}
               </span>
             </div>
 
@@ -130,7 +140,10 @@ export default function Education() {
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   background: 'var(--accent-dim)', borderRadius: 10,
                 }}>
-                  {h.icon}
+                  {(() => {
+                    const Icon = HIGHLIGHT_ICONS[i] || FiAward;
+                    return <Icon size={18} color="var(--accent)" />;
+                  })()}
                 </span>
                 <div>
                   <h4 style={{

@@ -1,6 +1,12 @@
 import { useState } from 'react';
 import publicationsData from '../data/publications.json';
 import ProjectModal from './ProjectModal';
+import {
+  FiArrowRight,
+  FiCode,
+  FiDatabase,
+  FiFileText,
+} from './AppIcons';
 
 export default function Publications() {
   const { publications } = publicationsData;
@@ -38,8 +44,8 @@ export default function Publications() {
               marginBottom: 20,
             }}
             onClick={() => setSelected(pub)}
-            onMouseEnter={e => { e.currentTarget.style.borderColor='var(--accent-border)'; e.currentTarget.style.boxShadow='var(--shadow-glow)'; e.currentTarget.style.transform='translateY(-3px)'; }}
-            onMouseLeave={e => { e.currentTarget.style.borderColor='var(--border)'; e.currentTarget.style.boxShadow='none'; e.currentTarget.style.transform='translateY(0)'; }}
+            onMouseEnter={e => { e.currentTarget.style.borderColor = 'var(--accent-border)'; e.currentTarget.style.boxShadow = 'var(--shadow-glow)'; e.currentTarget.style.transform = 'translateY(-3px)'; }}
+            onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--border)'; e.currentTarget.style.boxShadow = 'none'; e.currentTarget.style.transform = 'translateY(0)'; }}
           >
             {/* Left: Visual */}
             <div style={{
@@ -50,7 +56,7 @@ export default function Publications() {
               borderRight: '1px solid var(--border)',
               minHeight: 200,
             }}>
-              <span style={{ fontSize: 52 }}>{pub.fallbackIcon}</span>
+              <FiFileText size={50} color={pub.fallbackColor} />
               <div style={{
                 padding: '4px 12px', borderRadius: 100,
                 fontSize: '0.68rem', fontFamily: 'var(--font-mono)',
@@ -110,27 +116,27 @@ export default function Publications() {
                   className="btn btn-primary btn-sm"
                   onClick={e => e.stopPropagation()}
                 >
-                  📄 IEEE Paper
+                  <FiFileText size={13} style={{ marginRight: 6 }} /> IEEE Paper
                 </a>
                 <a
                   href={pub.links.code} target="_blank" rel="noopener noreferrer"
                   className="btn btn-outline btn-sm"
                   onClick={e => e.stopPropagation()}
                 >
-                  ⌥ Code
+                  <FiCode size={13} style={{ marginRight: 6 }} /> Code
                 </a>
                 <a
                   href={pub.links.dataset} target="_blank" rel="noopener noreferrer"
                   className="btn btn-ghost btn-sm"
                   onClick={e => e.stopPropagation()}
                 >
-                  🗃 Dataset
+                  <FiDatabase size={13} style={{ marginRight: 6 }} /> Dataset
                 </a>
                 <button
                   className="btn btn-ghost btn-sm"
                   style={{ marginLeft: 'auto' }}
                 >
-                  View Details →
+                  View Details <FiArrowRight size={13} />
                 </button>
               </div>
             </div>

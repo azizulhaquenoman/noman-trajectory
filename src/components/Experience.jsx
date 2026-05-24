@@ -1,10 +1,16 @@
 import expData from '../data/experience.json';
+import {
+  FiAward,
+  FiBookOpen,
+  FiBriefcase,
+  FiMessageCircle,
+} from './AppIcons';
 
 const TYPE_COLORS = {
-  research:    { bg: 'rgba(139,92,246,0.1)', border: 'rgba(139,92,246,0.25)', text: '#8b5cf6' },
+  research: { bg: 'rgba(139,92,246,0.1)', border: 'rgba(139,92,246,0.25)', text: '#8b5cf6' },
   achievement: { bg: 'rgba(245,158,11,0.1)', border: 'rgba(245,158,11,0.25)', text: '#f59e0b' },
-  education:   { bg: 'rgba(0,200,255,0.08)', border: 'rgba(0,200,255,0.2)',   text: '#00c8ff' },
-  work:        { bg: 'rgba(16,185,129,0.1)', border: 'rgba(16,185,129,0.25)', text: '#10b981' },
+  education: { bg: 'rgba(0,200,255,0.08)', border: 'rgba(0,200,255,0.2)', text: '#00c8ff' },
+  work: { bg: 'rgba(16,185,129,0.1)', border: 'rgba(16,185,129,0.25)', text: '#10b981' },
 };
 
 export default function Experience() {
@@ -59,7 +65,10 @@ export default function Experience() {
                       fontSize: '1.1rem',
                       position: 'relative', zIndex: 1,
                     }}>
-                      {item.icon}
+                      {item.type === 'research' && <FiAward size={18} color={colors.text} />}
+                      {item.type === 'achievement' && <FiAward size={18} color={colors.text} />}
+                      {item.type === 'education' && <FiBookOpen size={18} color={colors.text} />}
+                      {item.type === 'work' && <FiBriefcase size={18} color={colors.text} />}
                     </div>
                   </div>
 
@@ -121,7 +130,7 @@ export default function Experience() {
           border: '1px solid var(--accent-border)',
           display: 'flex', alignItems: 'center', gap: 14,
         }}>
-          <span style={{ fontSize: '1.4rem' }}>💬</span>
+          <FiMessageCircle size={24} color="var(--accent)" />
           <div>
             <p style={{ color: 'var(--accent)', fontWeight: 500, fontSize: '0.9rem', marginBottom: 4 }}>
               Currently Available

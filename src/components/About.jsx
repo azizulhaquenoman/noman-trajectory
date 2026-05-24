@@ -1,4 +1,23 @@
 import aboutData from '../data/about.json';
+import {
+  FiBookOpen,
+  FiMail,
+  FiMapPin,
+  FiUser,
+  SiFacebook,
+  SiGithub,
+  SiInstagram,
+  SiLinkedin,
+  SiTwitter,
+} from './AppIcons';
+
+const SOCIAL_ICONS = {
+  github: SiGithub,
+  linkedin: SiLinkedin,
+  twitter: SiTwitter,
+  facebook: SiFacebook,
+  instagram: SiInstagram,
+};
 
 export default function About() {
   const { name, summary, photo, location, email, stats, social } = aboutData;
@@ -52,7 +71,7 @@ export default function About() {
                   flexDirection: 'column', gap: 12,
                   background: 'linear-gradient(135deg, var(--bg-card), var(--bg-surface))',
                 }}>
-                  <span style={{ fontSize: 72 }}>🧑‍💻</span>
+                  <FiUser size={72} color="var(--text-subtle)" />
                   <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', color: 'var(--text-subtle)' }}>
                     add profile.jpg
                   </span>
@@ -130,12 +149,12 @@ export default function About() {
               borderRadius: 12,
             }}>
               {[
-                { icon: '🎓', label: 'Studying at', value: 'United International University, Dhaka' },
-                { icon: '📧', label: 'Email', value: email },
-                { icon: '🗺️', label: 'Based in', value: location },
+                { Icon: FiBookOpen, label: 'Studying at', value: 'United International University, Dhaka' },
+                { Icon: FiMail, label: 'Email', value: email },
+                { Icon: FiMapPin, label: 'Based in', value: location },
               ].map((item, i) => (
                 <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-                  <span style={{ fontSize: '1rem' }}>{item.icon}</span>
+                  <item.Icon size={16} color="var(--accent)" />
                   <span style={{ color: 'var(--text-subtle)', fontSize: '0.82rem', width: 90, flexShrink: 0 }}>{item.label}</span>
                   <span style={{ color: 'var(--text)', fontSize: '0.88rem', fontWeight: 500 }}>{item.value}</span>
                 </div>
@@ -144,32 +163,31 @@ export default function About() {
 
             {/* Social links */}
             <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-              {Object.entries(social).map(([platform, url]) => (
-                <a
-                  key={platform}
-                  href={url} target="_blank" rel="noopener noreferrer"
-                  style={{
-                    padding: '7px 16px',
-                    borderRadius: 8,
-                    fontSize: '0.8rem',
-                    fontWeight: 500,
-                    background: 'var(--bg-card)',
-                    border: '1px solid var(--border)',
-                    color: 'var(--text-muted)',
-                    transition: 'var(--transition)',
-                    textTransform: 'capitalize',
-                  }}
-                  onMouseEnter={e => { e.currentTarget.style.color='var(--accent)'; e.currentTarget.style.borderColor='var(--accent-border)'; e.currentTarget.style.background='var(--accent-dim)'; }}
-                  onMouseLeave={e => { e.currentTarget.style.color='var(--text-muted)'; e.currentTarget.style.borderColor='var(--border)'; e.currentTarget.style.background='var(--bg-card)'; }}
-                >
-                  {platform === 'github' && '⌥ '}
-                  {platform === 'linkedin' && '◈ '}
-                  {platform === 'twitter' && '✕ '}
-                  {platform === 'facebook' && 'ƒ '}
-                  {platform === 'instagram' && '⬡ '}
-                  {platform}
-                </a>
-              ))}
+              {Object.entries(social).map(([platform, url]) => {
+                const Icon = SOCIAL_ICONS[platform];
+                return (
+                  <a
+                    key={platform}
+                    href={url} target="_blank" rel="noopener noreferrer"
+                    style={{
+                      padding: '7px 16px',
+                      borderRadius: 8,
+                      fontSize: '0.8rem',
+                      fontWeight: 500,
+                      background: 'var(--bg-card)',
+                      border: '1px solid var(--border)',
+                      color: 'var(--text-muted)',
+                      transition: 'var(--transition)',
+                      textTransform: 'capitalize',
+                    }}
+                    onMouseEnter={e => { e.currentTarget.style.color = 'var(--accent)'; e.currentTarget.style.borderColor = 'var(--accent-border)'; e.currentTarget.style.background = 'var(--accent-dim)'; }}
+                    onMouseLeave={e => { e.currentTarget.style.color = 'var(--text-muted)'; e.currentTarget.style.borderColor = 'var(--border)'; e.currentTarget.style.background = 'var(--bg-card)'; }}
+                  >
+                    {Icon && <Icon size={13} style={{ marginRight: 6, verticalAlign: 'text-bottom' }} />}
+                    {platform}
+                  </a>
+                );
+              })}
             </div>
           </div>
         </div>
