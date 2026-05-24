@@ -71,7 +71,7 @@ export default function Navbar() {
             letterSpacing: '-0.03em',
           }}
         >
-          Noman<span style={{ color: 'var(--text-subtle)' }}>.</span>
+          {'<Noman />'}<span style={{ color: 'var(--text-subtle)' }}></span>
         </a>
 
         {/* Desktop Nav */}

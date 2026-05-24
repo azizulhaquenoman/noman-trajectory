@@ -266,7 +266,7 @@ export default function ProjectModal({ item, onClose, isPublication }) {
           )}
 
           {/* Gallery */}
-          {item.gallery && item.gallery.length > 0 && (
+          {/* {item.gallery && item.gallery.length > 0 && (
             <div>
               <h4 style={{ fontSize: '0.8rem', fontFamily: 'var(--font-mono)', color: 'var(--text-subtle)', letterSpacing: '0.1em', marginBottom: 12, textTransform: 'uppercase' }}>
                 Gallery
@@ -307,7 +307,7 @@ export default function ProjectModal({ item, onClose, isPublication }) {
                 * Add gallery image URLs to the JSON file to populate this section.
               </p>
             </div>
-          )}
+          )} */}
         </div>
       </div>
 
