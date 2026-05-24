@@ -33,7 +33,7 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!form.email || !form.message) return;
+    if (!form.message) return;
 
     const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
     const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
@@ -170,8 +170,15 @@ export default function Contact() {
               }}
             >
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }} className="form-row">
-                <Field label="Your Name" name="name" placeholder="John Doe" value={form.name} onChange={handleChange} required />
-                <Field label="Email Address" name="email" type="email" placeholder="you@example.com" value={form.email} onChange={handleChange} required />
+                <Field label="Your Name" name="name" placeholder="Noman" value={form.name} onChange={handleChange} required />
+                <Field
+                  label="Email Address - add yours if you'd like a reply"
+                  name="email"
+                  type="email"
+                  placeholder="noman@example.com"
+                  value={form.email}
+                  onChange={handleChange}
+                />
               </div>
               <Field label="Subject" name="subject" placeholder="What's this about? (optional)" value={form.subject} onChange={handleChange} />
               <Field label="Message" name="message" placeholder="Tell me about your project, opportunity, or just say hello..." value={form.message} onChange={handleChange} required textarea rows={5} />
